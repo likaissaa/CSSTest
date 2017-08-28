@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body,div{
+				margin:0;
+				padding:0;
+				overflow: auto;
+				
+			}
+			
+			div{
+			width:100px;
+			height:100px;
+			margin-left:100%;
+			background-color:pink;
+			}
+		.test2{
+			border:1px solid red;
+			box-sizing: border-box;
+			margin-left:calc(100% - 100px);
+			background-color:pink
+		}
+		
+		</style>
+	</head>
+	<body>
+		<!--出现margin-left 的宽度参照body ，body参照html，html参照可视范围
+			但是加上本身的宽度那么就有超出的可能
+		-->
+		<div> css 200%；</div>
+		
+		<div class="test2">css
+		 100%</div>
+		 
+		
+	</body>
+</html>

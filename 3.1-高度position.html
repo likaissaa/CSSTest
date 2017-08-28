@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				position:absolute;
+				width:200px;
+				height:100%;
+				background-color:pink;
+			}
+		</style>
+	</head>
+	<body>
+		<!--css 往往出乎意料的情况-->
+		<!--如果绝对定位没有定位的祖先元素，则包含快为初始包含快，那么
+			百分比是参照可见区域大小
+		-->
+		<!--如果为body 添加position:relative 那么
+		-->
+		<div>
+			css 100%
+		</div>
+		<p style="height:500px;"></p>
+		
+	</body>
+</html>

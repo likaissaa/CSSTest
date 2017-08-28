@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body,div{
+				margin:0;
+				padding:0;
+			}
+		</style>
+	</head>
+	<body>
+		<!--元素被包含快包围，这里的auto 指的是 将包含快剩余的控件占满，-->
+		<!--margin-left:auto-->
+		<!--包含快
+			margin-left+border-left+padding-left+width+padding-right+
+			border-right+margin-right
+		-->
+		<!--一个值指定为auto计算值为剩余的空间-->
+		<!--宽度设置为auto 那么其他属性的auto 都是0，剩余的控件都会变成width-->
+		<!--margin-left 和margin-right 都是auto 就是剩余的空间计算值一人一半-->
+		<!--行内元素或者行内快元素设置auto 没有意义 如 fourth  设置margin-left 或right 为auto 的时候没有意义 默认auto计算值为0
+		-->
+		<!--宽度设置auto 没有大的意义  宽度本身就是auto-->
+		<!--absolute 和fixed 设置auto 会有所不同  如fifth-只有一个margin-left 不起作用  必须两个都有left:0 right:0 auto才有用-->
+		<!--seventh-测试margin：auto 是否垂直水平居中-->
+		<!--理论----
+			绝对定位元素
+			包含快=left + margin-left + border-left + padding-left + width + padding-right + border-right + margin-right + right
+			
+		-->
+		
+		<div style="width:100px;height:40px;margin-left:auto;background-color:pink">
+			margin-left:auto
+		</div>
+		<div style="width:100px;height:40px;margin-right:auto;background-color:pink">
+			margin-right:auto;
+		</div>
+		
+		<div style="width:100px;height:40px;margin:0 auto;background-color:pink">
+			margin:0 auto;
+		</div>
+		<!--fourth-->
+		<span style="margin-left:auto">auto</span>
+		<!--fifth-->
+		<div style="border:1px solid red;position:absolute;width:100px;margin-left:auto;background-color:pink">
+			absolute-auto
+		</div>
+		<br />
+		<!--sixth-->
+		<div style="border:1px solid red;position:absolute;top:200px;left:0;right:0;width:100px;margin:0 auto;background-color:pink">
+			absolute-auto-margin：0 auto
+		</div>
+		<!--seventh-->
+		<div style="position:relative;width:400px;height:400px;border:1px solid black;">
+			<div style="position:absolute;width:100px;height:100px;left:0;right:0;top:0;bottom:0;margin:auto;background-color:red">absolute-margin:auto 测试是否垂直居中</div>
+		</div>
+	</body>
+</html>

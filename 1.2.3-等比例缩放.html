@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		/*
+		 * 当子元素没有内容-那么显示高度为100 当有内容的时候就是为110
+		 * .box{width:100px;height:10px;}
+		.box div{width:100%;padding-bottom:100%;background-color:red;
+		}*/
+		
+		/**
+		 * 使用伪元素的padding-top;来撑开父元素的高
+		 */
+		.box{
+			width:30%;
+			height:10px;
+		}
+		.box div{
+			position:relative;
+			overflow: hidden;
+			background-color:red;
+			
+		}
+		.box div::after{
+			content:'';
+			display:block;
+			padding-top:100%;
+		}
+		.box div span{
+			position:absolute;
+			left:0;
+			top:0;
+		}
+		
+		.photo a{
+			position:relative;
+			float:left;
+			width: calc(33.33% - 1.6rem);
+			margin:1.2rem 0 0 1.2rem;
+			outline:1px solid #dedede;
+		}
+		
+		.photo a::before{
+			content:'',;
+			display:block;
+			padding-top:100%;
+			
+		}
+	</style>
+	<body>
+	
+		<!--利用伪元素-->
+		<div class="box">
+			<div>
+				<span>图片</span>
+			</div>
+		</div>
+		
+		<br />
+		<!---->
+		<div class="photo">
+			<a href="#">
+				<img src="img/Tsingtao.jpeg" />
+			</a>
+			<a href="#">
+				<img src="img/Tsingtao.jpeg" />
+			</a>
+			<a href="#">
+				<img src="img/Tsingtao.jpeg" />
+			</a>
+			<a href="#">
+				<img src="img/Tsingtao.jpeg" />
+			</a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width,maximum-scale=1.0,minimum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+	    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+		<title></title>
+		<style>
+/*		first-设置字体大小在 14-20 之间变化*/		
+		/*first*/
+/*		html{font-size:calc(14px + 6 * (100vw - 320px) / 660)}
+*/		
+		/*second-屏幕在320-980之间 字体大小14-20 如果>980px 事例如下second*/
+		/*second*/
+		body,div{
+			margin:0;
+			padding:0;
+		}
+		
+		html{
+			font-size:20px;
+		}
+		
+		@media screen and (max-width:980px) {
+			html{font-size:calc(14px + 6 * (100vw - 320px) / 660)}
+
+		}
+		.box{
+			width:10rem;
+			height:10rem;
+			font-size:2rem;
+			background-color:pink;
+		}
+		/*third-vw,vh垂直居中的利用*/
+		/*third*/
+		.box2{
+			width:100px;
+			height:100px;
+			margin-top:calc(50vh - 50px);
+			margin-left:calc(50vw - 50px);
+			background-color:pink
+		}
+		/*fourth   利用vw 实现 一等分 二等分 三等分*/
+		.column-1{
+			float:left;
+			width:100vw;
+		}
+		
+		.column-2{
+			float:left;
+			width:calc(100vw / 2);
+		}
+		
+		.column-3{
+			float:left;
+			width:calc(100vw / 3)
+		}
+		
+		body > div{
+			overflow: hidden;
+		}
+		
+		div > div{
+			height:35px;
+			outline:1px solid #dedede;
+		}
+		
+		.box-1 div{
+			background-color:red;
+		}
+		
+		.box-2 div{
+			background-color:orange;
+		}
+		
+		.box-3 div{
+			background-color:pink
+		}
+		</style>
+	</head>
+	<body>
+		<!--first-->
+		<!--<div>哈哈哈</div>-->
+		<!--second-->
+		<!--<div class="box">示例2</div>-->
+		<!--third-上面没有元素时候垂直水平居中-->
+		<!--<div class="box2">示例3</div>-->
+		
+		<!--fourth-->
+		<div class="box-1">
+			<div class="column-1"></div>
+		</div>
+		<div class="box-2">
+			<div class="column-2"></div>
+			<div class="column-2"></div>
+		</div>
+		<div class="box-3">
+			<div class="column-3"></div>
+			<div class="column-3"></div>
+			<div class="column-3"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+	/*当元素只有一个子元素*/
+		div:first-of-type:last-of-type{
+			color:red;
+		}
+	/*当元素只有一个子元素时*/
+		div:only-child{
+			color:red
+		}
+		
+	/*父亲元素有多个子元素*/
+	/*div:not(last-of-type):first-of-type{
+		color:red;
+	}*/
+	/*父亲元素有多个子元素*/
+	/*div:not(:only-child){
+		color:red
+	}*/
+	
+	/*多个子元素只选中最后一个*/
+	div:not(:only-child):last-of-type{
+		color:red;
+	}
+	
+	/*只有一个子元素时可以让他居中显示，如果有多个子元素时，可以让他水平排列*/
+	.box div{
+		width:100px;
+		height:100px;
+		border:1px solid red;
+		margin:0 auto;
+		
+	}
+	
+	.box div:not(only-child){
+		float:left;
+		margin-left:20px;
+	}
+	</style>
+	<body >
+		<div>123</div>
+		<div>123</div>
+		<div>456</div>
+		
+		<div class="box">
+			<div></div>
+		</div>
+	</body>
+</html>

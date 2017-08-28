@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			/*ch- 相当于5ch- 只能装下 5个0    1ch=1个英文=1个数字，2ch=1 中文*/
+			.box{
+				width:5ch;
+				background-color:pink;}
+			.box2{
+				width:3ch;
+				font-size:50px;
+				background-color:pink;
+			}
+			.box3{
+				width:16ch;
+				font-size:50px;
+				background-color:red;
+			}
+			
+			h1{
+				width:18ch;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow:ellipsis;
+				font-size:50px;
+				background-color:pink;
+			}
+		</style>
+	</head>
+	<body>
+		<!--ch- 相当于5ch- 只能装下 5个0    1ch=1个英文=1个数字，2ch=1 中文-->
+
+		<!--first 5ch 限制数字-->
+		<div class="box">
+			000000
+		</div>
+		<!--second 数字和文字的对比-->
+		<div class="box1"> css</div>
+		<div class="box2">全解探索未知的迷</div>
+		
+		<!--third-->
+		<h1>标题被限制输入了,超出隐藏奥。</h1>
+	</body>
+</html>
