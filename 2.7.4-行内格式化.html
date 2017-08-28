@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>IFC</title>
+		<style>
+			/**
+			 * 这是垂直对其
+			 * span:nth-of-type(1){
+				font-size:50px;
+				border:1px solid orange;
+			}
+			
+			span:nth-of-type(2){
+				vertical-align:baseline;
+			}*/
+			/*行内框*/
+			/*.box{
+				width:100px;
+				border:1px solid red;
+			}
+			span{
+				background-color:pink;
+			}
+			span:last-of-type{
+				line-height:50px;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div style="border:1px solid red;">
+			<span>我是来捣乱的</span>
+			<span>垂直对其</span>
+		</div>
+		
+		<div class="box">
+			<span>这是一个行内框吗</span>
+			<span></span>
+		</div>
+		<!--如果line-height <字体尺寸 那么行内框的高度将小于字体尺寸  一般浏览器不做处理 除了ie7(边框超出包含块会被裁减)-->
+		<div style="width:200px;border:1px solid red;">
+			<span style="line-height:10px;border:15px solid pink">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</span>
+		</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<!--设置各个方式的span line-height-->
+		<!--如果设置line-height：normal 就是由客户端制定具体的值-->
+		<div style="width:200px;line-height:25px"><span>一生所爱，一生所爱</span></div>
+		<div style="width:200px;border:1px solid red;"><span style="line-height:23px;">一生所爱2222</span></div>
+		<div style="width:200px;"><span>一生所爱 <em style="font-style:normal;font-size:25px;">这</em></span></div>
+	</body>
+</html>

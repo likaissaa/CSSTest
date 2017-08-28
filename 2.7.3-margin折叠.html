@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body,div{
+				margin:0;
+			}
+			div{
+				width:100px;
+				height:100px;
+			}
+			.box{
+				margin-top:50px;
+				background-color:red;
+			}
+			.item{
+				margin-top:100px;
+				background-color:pink;
+			}
+			
+			
+			.box1{margin-top:50px;border:1px solid red;}
+			.item1{
+				margin-top:100px;
+				margin-bottom:50px;
+				border:1px solid black;
+			}
+			.item2{
+				margin-top:100px;
+				background:green;
+			}
+			
+			.box2{
+				margin-top:50px;
+				background-color:red;
+				border:1px solid red;
+			}
+			
+			
+			.item3{
+				margin-top:100px;
+				margin-bottom:50px;
+				background-color:pink;
+			}
+			.item4{
+				margin-top:100px;
+				background-color:pink;
+			}
+			.child{
+				margin-top:150px;
+				background-color:green;
+			}
+			
+			.box3{
+				margin-top:60px;
+				background-color:red;
+			}
+			.item5{
+				margin-top:-50px;
+				background-color:orange;
+			}			
+		</style>
+	</head>
+	<body>
+		<!--子元素和父元素垂直方向的外边距也会折叠-->
+		<div class="box">
+			<div class="item"></div>
+		</div>
+		<br />
+		<!--多个子元素只有第一个元素的margin-top 和最后一个元素的magin-bottom 会和父亲元素的外边距折叠-->
+		<div class="box1 ">
+			<div class="item1">123</div>
+			<div class="item2">231</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<!--子元素同事是另外一个元素的父元素的外边距折叠-->
+		<div class="box2">
+			<div class="item3">item3</div>
+			<div class="item4">
+				<div class="child">item4-child</div>
+			</div>
+		</div>
+		
+		<!--负的外边距,会从挣得相邻外边距的最大值扣除负的相邻外边距的 绝对值的最大值-->
+        <p style="height:400px;"></p>
+		<div class="box3">
+			<div class="item5">负的外边距</div>
+		</div>
+	</body>
+</html>

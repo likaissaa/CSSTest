@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width:100px;
+				background-color:green;
+				border:2px solid black;
+			}
+			.box > div{
+				width:100px;
+				height:100px;
+			}
+			.item1{
+				border:1px solid red;
+				margin-bottom:50px;
+				background-color:pink;
+			}
+			.item2{
+				margin-top:100px;
+				background-color:orange;
+			}
+			
+			/*float*/
+			.item3{
+				float:left;
+				width:100px;
+				height:100px;
+				margin-left:10px;
+				background-color:pink;
+			}
+			.item4{
+				overflow:hidden;
+			width:200px;
+			height:100px;
+			background-color:orange;}
+			
+			.item5{
+				float:left;
+				width:100px;
+				height:100px;
+				line-height:100px;
+				margin-right:12px;
+				background-color:pink;
+				text-align: center;
+			}
+			.item5 img{width:30px;height:30px;vertical-align: middle;}
+			.item6{
+				overflow:hidden;
+				width:200px;
+				background-color:orange;
+			}
+			/*使用inline-block 不设置宽度 文本会掉下去，不适合自适应*/
+			.item7{
+				float:left;
+				width:100px;
+				height:100px;
+				line-height:100px;
+				margin-right:12px;
+				background-color:pink;
+				text-align: center;
+			}
+			
+			.item7 img{width:30px;height:30px;vertical-align: middle;}
+			.item8{
+				display: inline-block;
+				background-color:orange;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="item1">item1</div>
+			<div class="item2">item2</div>
+		</div>
+		
+		<div class="box1">
+			<div class="item3">float</div>
+			<div class="item4">block</div>
+		</div>
+		<br />
+		<div class="box2">
+		<!--解决左侧图片固定，右侧自适应 尽量不要用inline-block 如果此元素没有定义宽度,那么就会掉下去-->
+			<div class="item5"><img src="img/11.png"/></div>
+			<div class="item6">
+				<h2>亲，这是一个新鲜的水果</h2>
+				<h2>看好就买了吧,好久买了啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</h2>
+			</div>
+		</div>
+		<br />
+		<div class="box3">
+		<!--解决左侧图片固定，右侧自适应 尽量不要用inline-block 如果此元素没有定义宽度,那么就会掉下去-->
+			<div class="item7"><img src="img/11.png"/></div>
+			<div class="item8">
+				<h2>亲，这是一个新鲜的水果</h2>
+				<h2>看好就买了吧,好久买了啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</h2>
+			</div>
+		</div>
+	</body>
+</html>
