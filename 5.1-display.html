@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body,div{
+				margin:0;
+				padding:0;
+			}
+			.item1{
+				display:inline;
+				padding:100px;
+				background-color:pink;
+			}
+			
+			.item2{
+				display: block;
+				width:100px;
+				height:100px;
+				background-color:green;
+				border:1px solid green;
+			}
+		</style>
+	</head>
+	<body>
+		<!--first -两个div 并排 但是发现有间隙  可能是因为空格 或者tab 等 参见second 解决-->
+		<div style="display: inline;border:1px solid red;">123</div>
+		<div  style="display: inline;border:1px solid red;">456</div>
+		<br />
+		<!--second 解决inline间的间隙 -->
+		<div  style="display: inline;border:1px solid red;">3333333333333333333333</div><div  style="display: inline;border:1px solid red;">4444444444444444444444444</div>
+		<br />
+		<!--third  *inline 对于margin-top，bottom height width 不起作用 对于padding 解析有特殊的地方-->
+		<div class="item1">inline padding</div>  <!--padding 脱离文档流一样不会占据位置，并且覆盖其他元素-->
+		<div class="item2">block</div>           
+		<br/>
+		<div style="height:120px;"></div>
+		<!--fourth *inline 只有padding-top 和padding-bottom 但是没有内容不显示。
+		-->
+		<div style="height:100px;background-color:red;"></div>
+		<div style="display:inline;padding-top:50px;padding-bottom:50px;background-color:pink"></div>
+		<br />
+		<br />
+		<!--fifth  *inline  强行使  padding-top 和padding-bottom 没有内容显示就是 设置padding-left 或添加内容-->
+		<div style="display:inline;padding-top:50px;padding-bottom:50px;padding-left:50px;background-color:red;"></div>
+		<div style="display:inline;padding-top:50px;padding-bottom:50px;background-color:yellow">inline-有内容</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<!--sixth  *inline-block-->
+		<div style="display:inline-block;width:100px;height:100px;line-heigth:100px;background-color:yellow;">item1</div>
+		<div style="display:inline-block;background-color:pink;">item2</div>
+		<br />
+		<br />
+		<!--seventh *inline-block 并列的inline-block 元素之间 谁的margin，padding 和line-height 就听谁的-->
+		<div>
+			<div style="display:inline-block;width:100px;height:100px;margin-top:20px;background-color:red;">item1</div>
+			<div style="display:inline-block;margin-top:100px;background-color:pink;">item2</div>
+		</div>
+		<br />
+		<!--eighth *inline-block 和inline 一起使用  多种 去掉空格的方法-->
+		<!--eighth-1 使用注释                    2使用font-size  margin-left  letter-spacing 在这里不介绍-->
+		<div style="display:inline-block;width:100px;height:100px;background-color:red;">8-item1</div><!--
+		--><div style="display:inline;background-color:pink;">8-item2</div>
+	</body>
+</html>

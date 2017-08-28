@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+			padding:0;
+			margin:0;}
+		</style>
+	</head>
+	<body>
+	<!--first -表格的运用        表格的自适应  table 上添加  width:100%;box-sizing:border-box;-->
+		<div style="display:table;border-collapse: collapse;width:100%;">
+			<div style="display:table-caption;height:35px;line-height:35px;text-align: center;">这是一个表格</div>
+			<div style="display:table-row">
+				<div style="display:table-cell;height:35px;line-height:35px;border:1px solid #dedede;">item1</div>
+				<div style="display:table-cell;height:35px;line-height:35px;border:1px solid #dedede;">item1</div>
+				<div style="display:table-cell;height:35px;line-height:35px;border:1px solid #dedede;">item1</div>
+			</div>
+			<div style="display:table-row">
+				<div style="display:table-cell;height:35px;line-height:35px;border:1px solid #dedede;">item1</div>
+				<div style="display:table-cell;height:35px;line-height:35px;border:1px solid #dedede;">item1</div>
+				<div style="display:table-cell;height:35px;line-height:35px;border:1px solid #dedede;">item1</div>
+			</div>
+		</div>
+		<br />
+		<br />
+	<!--second-table 版本的垂直居中  有趣------原理是 table-cell  的表格元素 使用vertical-align
+		:middle 能够使元素居中  接着 margin：0 auto 嗨皮一下
+	-->
+		<div style="width:300px;height:300px;display:table;border:1px solid #dedede;">
+			<div style="display:table-cell; vertical-align: middle;">
+				<p style="width:100px;height:100px;line-height:100px;text-align: center;margin:0 auto;"></p>
+			</div>
+		</div>
+	</body>
+</html>
