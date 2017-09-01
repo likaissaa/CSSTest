@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{margin:0;padding:0;}
+		/*first- h1-后面的第一个元素*/
+			h1+p{
+				color:red;
+			}
+		/*second - */
+		.box{
+			width:400px
+		}
+		.box > div{
+			width:100px;
+			height:35px;
+			line-height:35px;
+			text-align: center;
+			float:left;
+			border:2px solid red;
+			box-sizing: border-box;
+		}
+		/*兄弟元素不包括自己*/
+		.box>div+div{
+			border-left:none;
+		}
+		/*third*/
+		#close:checked+label+ .content{
+			display:none;
+		}
+		/*fourth*/
+		ul{
+			list-style:none;
+		}
+		
+		.box3{
+			width:450px;
+			margin:100px;
+		}
+		
+		.box3 >ul li{
+			width:150px;
+			height:35px;
+			line-height:35px;
+			text-align: center;
+			float:left;
+			border:1px solid #dedede;
+			box-sizing:border-box;
+		}
+		
+		.box3 > ul > li li{
+			border-top:none;
+		}
+		.box3 >ul >li+li{
+			border-left:none;
+		}
+		.box3 >ul >li >ul{
+			display: none;
+		}
+		
+		.box3 >ul>li:hover ul{
+			display:block
+		}
+		/*fifth -active 触发过度效果*/
+		.box4{
+			width:120px;
+			height:100px;
+			line-height:100px;
+			text-align: center;
+			margin:100px auto;
+			background-color:pink;
+			transition: all 1s
+		}
+		
+		.box4:active{
+			padding:100px;
+		}
+		.box5{
+			text-align:center;
+			background-color:pink;
+		}
+		.box5:first-letter{
+			font-size:33px;
+		}
+		
+		.box6{
+			margin-top:10px;
+			margin-left:50px ;
+			background-color:pink;
+		}
+		
+		.box6:first-letter{
+			font-size:16px;
+			line-height:36px;
+			margin:0px 6px;
+			color:yellow;
+			background-color:currentcolor
+		}
+		
+		.box8{
+			position:relative;
+			width:200px;
+			height:200px;
+			text-align:center;
+			margin:100px auto;
+			/*border:1px solid red;*/
+		}
+		/*模拟父亲元素*/
+		.box8 .item2{
+			position:absolute;
+			left:0;
+			top:0;
+			width:100%;
+			height:100%;
+			outline:1px solid #dedede;
+			z-index:-1;
+		}
+		
+		.box8 .item1:hover +.item2{
+			outline:1px solid red;
+		}
+		/*ninth-empty*/
+		.box9{
+			margin:100px;
+		}
+		.box9 ul{
+			margin:10px;
+		}
+		
+		ul:empty::after{
+			content:'留言空空如也'
+		}/*tenth- target*/
+		#target10:target{
+			color:red;
+		}
+		/*eleventh*/
+		#show{
+			text-decoration:none;
+			color:#000;
+		}
+		
+		#show div{
+			position:fixed;
+			left:50%;
+			top:50%;
+			width:200px;
+			height:200px;
+			transform:translate(-50%,-50%);
+			border:10000px solid rgba(0,0,0,.3);
+			display:none;
+		}
+		
+		#show:target > div{
+			display:block;
+		}
+		
+		#hide:target{
+			display:none;
+		}
+		/*twelfth*/
+		.box12{
+			width:300px;
+			height:300px;
+			text-align: center;
+			margin:100px auto;}
+		.title{
+			overflow:hidden;
+		}
+		
+		.title>a {
+			float:left;
+			width:100px;
+			height:35px;
+			line-height:35px;
+			border:1px solid #dedede;
+			box-sizing:border-box;
+			text-decoration: none;
+		}
+		
+		.title >a:not(:first-of-type){
+			border-left:none;
+		}
+		
+		.content{
+			position:relative;
+		}
+		
+		.content > div{
+			position:absolute;
+			left:0;
+			top:0;
+			width:100%;
+			height:200px;
+			line-height:200px;
+			border:1px solid #dedede;
+			background-color:#fff;
+			border-top:none;
+			box-sizing:border-box;
+		}
+		
+		#content1{
+			z-index:1;
+		}
+		
+		#content1:target,#content2:target,#content3:target{
+			z-index:999;
+		}
+		
+		
+		</style>
+	</head>
+	<body>
+		<!--first-->
+			<h1>兄弟快过来</h1>
+			<p>来了</p>
+			<p>来了</p>
+			<br />
+			<br />
+		<!--second-->
+			<div class="box">
+				<div>我哈哈</div>
+				<div>css3</div>
+				<div>html5</div>
+				<div>javascript</div>
+			</div>
+		<!--third  点击关闭  关闭元素  省略js 可以-->
+			<div class="box2">
+				<input type="radio" id="close"/>
+				<label for="close">关闭</label>
+				<div class="content">
+					这里充当父元素
+				</div>
+			</div>
+			<br />
+			<br />
+			<br />
+			<br />
+		<!--fourth-hover 的下拉菜单-->
+		<div  class="box3">
+			<ul>
+				<li>
+					追梦<ul>
+							<li>
+								博客动态
+							</li>
+						</ul>
+				</li>
+				<li>
+					css3
+					<ul>
+						<li>文章</li>
+						<li>技巧</li>
+					</ul>
+				</li>
+				<li>
+					HTML5
+					<ul>
+						<li>HTML5 最新动态</li>
+						<li>HTML5 使用教程</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		<!--fifth-触发过度效果-->
+		<div class="box4">5-点击获取能量</div>
+		<!--sixth-fist-leftter 的使用    选中第一个字体-->
+		<div class="box5">6-点击获取能量</div>
+		
+		<!--seventh--特殊情况-->
+		<div class="box6">牛捷安特</div>
+		<div class="box6">|捷安特</div>
+		<div class="box6">|捷安特</div>
+		<!--eighth  ：first-line  选择首行-->
+		<!--ninth ：模拟父级 选择器  hover
+			 改变边框事件
+		-->
+		<div class="box8">
+			<div class="item1">
+				css
+			</div>
+			<div class="item2"></div>
+		</div>
+		<!--ninth -empty 选择器   ul 没有子元素等 就会显示留言空空  -->
+		<div class="box9">
+			<input type="text">
+			<ul></ul>
+		</div>
+		<!--tenth -target-->
+		<a href="#box10">点击描点</a>
+		<div id="box10" style="margin-top:100px;">跳转到我这</div>
+		<!--eleventh-->
+		<div class="box11">
+			<a href="#show">弹出层</a>
+			<a href="#hide" id="show">
+				<div id="hide">弹弹弹</div>
+			</a>
+		</div>
+		<!--twelfth-->
+		<div  class="box12">
+			<nav class="title">
+				<a href="#content1">CSS</a>
+				<a href="#content2">HTML</a>
+				<a href="#content3">Javascript</a>
+			</nav>
+			<div class="content">
+				<div id="content1">CSS</div>
+				<div id="content2">HTML</div>
+				<div id="content3">Javascript</div>
+			</div>
+		</div>
+	</body>
+</html>
