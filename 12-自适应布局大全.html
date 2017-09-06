@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body,div,h1,p{
+				margin:0;
+				padding:0;
+			}
+			
+			.box > img{
+				width:100px;
+				height:100px;
+				float:left;
+				overflow:hidden;
+			}
+			.content{
+				margin-left:100px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--first  左侧固定，右侧自适应-->
+		<div class="box">
+			<img src="img/Tsingtao.jpeg" />
+			<div class="content">
+				<h3>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</h3>
+			</div>
+		</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<!--右侧固定 左侧自适应-->
+		<div style="height:35px;line-height:35px;overflow: hidden;">
+			<a href="javascript;" style="display: block;float:right;width:80px;height:100%;text-align: center;color:#fff;background-color:orange;text-decoration: none;">确定</a>
+			<p style="height:100%;text-align: center;background-color:#ccc">价格：¥120啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+		</div>
+		<br />
+		<!--third  定位实现 second 效果  这方法有漏洞看看就行 菜鸡-->
+		<div style="position:relative;height:35px;line-height:35px;overflow: hidden;">
+			<a href="#" style="position:absolute;right:0;top:0;width:80px;height:100%;text-align: center;color:#fff;background-color:orange;text-decoration:none;">确定</a>	
+			<p style="height:100%;text-align: center;background-color:#ccc;">a afa ajdfljaslfj lajsf l阿多少山山水水说啊啊啊啊啊啊啊啊啊啊啊啊啊上撒啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+		</div>
+	</body>
+</html>
