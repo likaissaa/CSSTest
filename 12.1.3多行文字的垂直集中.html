@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin:0;
+			  padding:0;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<!--first  使用padding 属性  缺点 去掉一个元素 那么他的高度也会变化  不太理想-->
+			<div style="border:1px solid red;padding:20px 0">
+				<p>af adjf;a  </p>
+				<p>23wojoijefldsjlfkj</p>
+			</div>
+			<!--second  table-cell;vertical-align:middle;-->
+			<div style="display:table;width:100%;height:60px;border:1px solid red;">
+				<div style="display:table-cell;vertical-align: middle;">
+					<p>12jsda;fa</p>	
+					<p>12jsda;fa</p>	
+				</div>
+			</div>
+			<br />
+			<!--third 定位-->
+			<div style="position:relative;height:60px;border:1px solid red;">
+				<div style="position:absolute;left:0;top:0;bottom:0;height:36px;margin-top:auto;margin-bottom:auto;">
+					<p>wocao</p>
+					<p>haha</p>
+				</div>
+			</div>
+			<br />
+			<br />
+			<!--fourth  讲的就是 先让文字距离上边50%，定位 是相对于外层的  然后translatey 相对于自身的 所以  下来一个50 上去一个自身高度的一半 可以的 -->
+			<div style="position:relative;height:60px;border:1px solid red;">
+				<div style="position:absolute;top:50%;transform:translateY(-50%);-webkit-transform: translateY(-50%);">
+					<p>wocao</p>
+					<p>niajfalkdjf;a</p>
+				</div>
+			</div>
+			<br />
+			<!--fifth  用margin 来一波  这个margin 就是跟上面很像不过他的 上移的距离 是文字的高度 缺点-->
+			<div style="position:relative;height:60px;border:1px solid red;">
+				<div style="position:absolute;top:50%;margin-top:-18px;">
+					<p>23234</p>
+					<p>w234234</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
