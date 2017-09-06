@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width:150px;
+				float:left;
+				margin-right:5px;
+				border:1px solid #dedede;
+				
+			}
+			
+			div:nth-of-type(1){
+				text-align-last:justify;
+			}
+			
+			div:nth-of-type(2){
+				text-align-last:start;
+			}
+			
+			div:nth-of-type(3){
+				text-align-last:end;
+			}
+			body,ul,li,label,input{
+				margin:0;padding:0;
+			}
+			
+			ul{
+				list-style:none;
+			}
+			label{
+				width:100px;
+				display:inline-block;
+				text-align-last:justify;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div>这是一段很长很长的文字</div>
+		<div>这是一段很长很长的文字</div>
+		<div>这是一段很长很长的文字</div>
+		
+		<!--使用text-align-lat 对齐方式解决用户名 密码对齐问题-->
+		
+		<ul>
+			<li>
+				<label for="#user">网名:</label>
+				<input type="text" />
+			</li>
+			<li>
+				<label for="#user">个性签名:</label>
+				<input type="text" />
+			</li>
+		</ul>
+		
+		
+		<br />
+		<!--second --用户名和密码的文字对齐   white-space:pre 保留空格 这个比使用一大堆&nbsp； 好用非常多-->
+		<ul>
+			<li style="overflow: hidden;">
+				<label for="#user" style="width:100px;white-space:pre;">网        名:</label>
+				<input type="text" />
+			</li>
+			<li>
+				<label for="#user">个性签名:</label>
+				<input type="text" />
+			</li>
+		</ul>
+	</body>
+</html>

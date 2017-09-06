@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width:150px;
+				height:100px;
+				outline:1px solid #dedede;
+			}
+			
+			div:nth-of-type(1){
+				writing-mode:horizontal-tb;
+			}
+			
+			div:nth-of-type(2){
+				writing-mode: vertical-rl;
+			}
+			
+			div:nth-of-type(3){
+				writing-mode: vertical-lr;
+			}
+			
+			div:nth-of-type(4){
+				writing-mode: lr-tb;
+				/*ie 浏览器*/
+			}
+			
+			div:nth-of-type(5){
+				writing-mode: tb-rl;
+			}
+		</style>
+	</head>
+	<body>
+		<div>水平从上到下的书写方式</div>
+		<div>垂直方向从右到左的方式</div>
+		<div>垂直方向从左到右的方式</div>
+		<div>水平方向从上到下的书写方式</div>
+		<div>垂直方向从右到左的书写方式</div>
+	</body>
+</html>

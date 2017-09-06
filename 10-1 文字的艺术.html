@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--first  文字阴影的使用-->
+		<div style="font-size:60px;text-shadow:5px 20px 3px red;">一场雨哈哈哈</div>
+		<!--second-->
+		<div style="font-size:60px;color:rgba(0,0,0,.3)">一场雨</div>
+		<!--third-->
+		<div style="font-size:60px;color:rgba(0,0,0,.3);text-shadow:0 0 10px;">一场雨</div>
+		<!--fourth 假设文字无色 那么只剩下 阴影颜色 笑-->
+		<div style="font-size:60px;text-shadow:0 0 8px;-webkit-text-fill-color:transparent">四场雨</div>
+		<!--fifth  文字描边 属性text-stroke  兼容性太差---->
+		
+		<div style="font-size:60px;-webkit-text-stroke:1px red;">五场雨</div>
+		<div></div>
+		
+		<!--sixth  喵边 +阴影+字体透明-->
+		<div style="font-size:60px;-webkit-text-fill-color:transparent;-webkit-text-stroke:1px red;text-shadow:0 0 63px red;">wo场雨</div>
+		
+		<!--seventh-新增的两端对齐属性  justify 不会对第一行和最后一行起作用-->
+		<div>这是justify</div>
+		<div>这是start</div>
+		<div>这是end</div>
+		<div>这是justify-all</div>
+	</body>
+</html>
