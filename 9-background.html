@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.suofang{
+				width:100px;
+				height:100px;
+				padding: 10px;
+				border:4px solid #dedede;
+				background:url(img/Tsingtao.jpeg);
+				background-clip:content-box;
+			}
+			.suofang:hover{
+				background-clip:padding-box;
+			}
+		</style>
+	</head>
+	<body>
+		<!--first-背景-->
+		<div style="width:100px;height:100px;background-color:pink;">
+			一直会唱歌的鸟
+		</div>
+		<br />
+		<br />
+		<!--second-padding有背景-->
+		<div style="width:100px;height:100px;padding:50px;background-color:pink;">second-padding 有背景</div>
+		<br/>
+		<br/>
+		<br/>
+		<!--third background:50% 50%-->
+		<div style="width:200px;height:200px;border:1px solid red;background:url(img/Tsingtao.jpeg)  no-repeat 50% 50%;background-size:50px 50px;"></div>
+		<br/>
+		<br/>
+		<br/>
+		<!--fourth-background-origin   背景图片默认值是padding-box；-->
+		<div>
+			<div style="float:left;width:100px;height:100px;padding:20px;margin-right:10px;border:10px solid pink;background:url(img/Tsingtao.jpeg) no-repeat;background-size:60px 60px">默认</div>
+			<div  style="float:left;width:100px;height:100px;padding:20px;margin-right:10px;border:10px solid pink;background:url(img/Tsingtao.jpeg) no-repeat;background-size:60px 60px;background-origin:border-box">border</div>
+			<div style="float:left;width:100px;height:100px;padding:20px;margin-right:10px;border:10px solid pink;background:url(img/Tsingtao.jpeg) no-repeat;background-size:60px 60px;background-origin:padding-box;">padding</div>
+			<div style="float:left;width:100px;height:100px;padding:20px;margin-right:10px;border:10px solid pink;background:url(img/Tsingtao.jpeg) no-repeat;background-size:60px 60px;background-origin:content-box;">content</div>
+		</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<!--fifth  background-clip---->
+		<div>
+		<div style="float:left;width:100px;height:100px;padding:20px;margin-right:10px;border:20px solid pink;background-color:red;">	默认</div>
+		<div style="float:left;width:100px;height:100px;padding:20px;margin-right:10px;border:20px solid pink;background-color:red;background-clip:border-box;">border</div>
+		<div style="float:left;width:100px;height:100px;padding:20px;margin-right:10px;border:20px solid pink;background-color:red;background-clip:padding-box;">padding	</div>
+		<div style="float:left;width:100px;height:100px;padding:20px;margin-right:10px;border:20px solid pink;background-color:red;background-clip:content-box">content</div>
+		<div style="float:left;width:100px;height:100px;padding:20px;margin-right:10px;border:20px solid pink;background-color:red;-webkit-background-clip:text;">text</div>
+		</div>
+		<!--sixth  --background-clip: 制作一个图片呈缩放效果-->
+		
+		<div class="suofang">
+			
+		</div>
+		
+		<!--seventh --  字体使用背景填充色-->
+		<div style="font-size:100px;-webkit-text-fill-color:transparent;background:url(img/Tsingtao.jpeg);-webkit-background-clip:text">看不到我，看不到我</div>
+		<!--eighth  -- 字体使用背景填充色2-->
+		<div style="font-size:100px;-webkit-text-fill-color:transparent;background:linear-gradient(to bottom,#ccc,#fff);-webkit-background-clip:text">看不到我2，看不到我2</div>
+		
+		<!--ninth-->
+		<div>
+		<div style="width:200px;height:200px;border:1px solid #dedede;outline:1px solid #dedede;margin-right:5px;float:left;background:url(img/Tsingtao.jpeg) no-repeat;background-size:auto">auto</div>
+		<div style="width:200px;height:200px;border:1px solid #dedede;outline:1px solid #dedede;margin-right:5px;float:left;background:url(img/Tsingtao.jpeg) no-repeat;background-size:cover">cover</div>
+		<div style="width:200px;height:200px;border:1px solid #dedede;outline:1px solid #dedede;margin-right:5px;float:left;background:url(img/Tsingtao.jpeg) no-repeat;background-size:contain">contain</div>
+		<div style="width:200px;height:200px;border:1px solid #dedede;outline:1px solid #dedede;margin-right:5px;float:left;background:url(img/Tsingtao.jpeg) no-repeat;background-size:100% 100%">100%</div>
+		</div>
+		
+		<!--tenth css3-  一个元素设置多个背景-->
+		<br />
+		<div style="width:500px;height:300px;border:1px solid red;margin-top:200px;"></div>
+	</body>
+</html>
