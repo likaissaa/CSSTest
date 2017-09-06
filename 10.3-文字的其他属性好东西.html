@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width:200px;
+				height:18px;
+				overflow: hidden;
+			}
+			
+			.box .item{
+				float:left;
+				margin-right:23px;
+			}
+			
+			.box:after{
+				content:'';
+				float:right;
+				margin-top:-38px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--first- 例子-->
+		<div style="width:150px;outline:1px solid #dedede;">
+			明年的今天,你在干啥呀啊哈哈哈
+		</div>
+		<!--secjond -- 超出的文字显示为省略号d-->
+		<div style="width:150px;text-overflow:ellipsis;white-space:pre;outline:1px solid #dedede;overflow: hidden;">明年的今天,你在干啥呀啊哈哈哈</div>
+		
+		<!--third 自定义隐藏时的效果-->
+		
+		<div class="box">
+			<div class="item">明年的今天，妮子哈桑明年的今天你在你您</div>
+		</div>
+	</body>
+</html>

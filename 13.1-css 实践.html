@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--当边框颜色和文字颜色一样时 可以省略边框颜色  边框默认继承文字的颜色-->
+		
+		<div style="width:200px;height:35px;line-height:35px;text-align: center;color:red;border:1px solid ">box</div>
+		<!--2 -当文字颜色和其他属性一样时候 可以使用currentcolor继承 文字颜色-->
+		<div style="width:100px;height:100px;color:red;background-color:blue;border:1px solid currentcolor">wocao</div>
+		<br />
+		<br />
+		<!--3 -  inherit 继承父亲样式-->
+		
+		<div style="width:100px;height:100px;border:1px solid red;">
+			<div style="width:50%;height:50%;border:inherit;"></div>
+		</div>
+		
+		<!--4 -  inherit 继承父亲样式  只继承颜色不继承其他的-->
+		
+		<div style="width:100px;height:100px;border:1px solid red;">
+			<div style="width:50%;height:50%;border:inherit;border-width:4px;"></div>
+		</div>
+		
+		
+	</body>
+</html>

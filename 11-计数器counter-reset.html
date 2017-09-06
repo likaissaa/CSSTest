@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul{
+				list-style:none;
+				counter-reset:num;
+			}
+			ul>li::before,h2:before{
+				counter-increment:num;
+				content:'List' counter(num) ":"
+			}
+			
+			body{
+				counter-reset:title;
+				counter-reset:checked;
+			}
+			
+			h3:before{
+				counter-increment:title;
+				content:'The ' counter(title) ' ';
+			}
+			
+			input:checked{
+				counter-increment: checked;
+			}
+			
+			p::after{
+				content:counter(checked) '个分类'
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>aaaaaaaa</li>
+			<li>bbbbbbbbbbb</li>
+			<li>cccccccc</li>
+		</ul>
+		<h2>dddddd</h2>
+		<!--second  给body 加上counter-reset  第一次使用counter-reset 表示创建，第二次使用就表示重置，一个页面只有一个body，对于只需要增加不需要重置 的可以写在body 里面  当然也可以下载其他元素里 只要保证唯一-->
+		<h3>Title</h3>
+		<h4>这是一段内容</h4>
+		<h4>这是一段内容</h4>
+		
+		<h3>Title</h3>
+		<h4>这是一段内容</h4>
+		<h4>这是一段内容</h4>
+		
+		<h3>Title</h3>
+		<h4>这是一段内容</h4>
+		<h4>这是一段内容</h4>
+		
+		<!--third -->
+		css3<input type="checkbox" />
+		html5<input type="checkbox" />
+		javascript <input type="checkbox"/>
+		<p></p>
+	</body>
+</html>

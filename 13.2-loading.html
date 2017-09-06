@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				position:relative;
+			}
+			
+			#box i{
+				position:absolute;
+				top:0;
+				width:4px;
+				height:35px;
+				background-color:#0bac84;
+				border-radius: 5px;
+			}
+			
+			#box>i:nth-of-type(1){
+				left:0;
+				animation:loading 1s ease-in .1s infinite;
+			}
+			#box>i:nth-of-type(2){
+				left:8px;
+				animation:loading 1s ease-in .3s infinite;
+			}
+			#box>i:nth-of-type(3){
+				left:16px;
+				animation:loading 1s ease-in .6s infinite
+			}
+			#box>i:nth-of-type(4){
+				left:24px;
+				animation:loading s ease-in .3s infinite;
+			}
+			
+			@keyframes loading{
+				0%{
+					transform:scaleY(1);
+				}
+				
+				50%{
+					transform:scaleY(0.5);
+				}
+				
+				100%{
+					transform:scaleY(1);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<i></i>
+			<i></i>
+			<i></i>
+			<i></i>
+		</div>
+	</body>
+</html>

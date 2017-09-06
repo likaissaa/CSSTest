@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				counter-reset:num;
+			}
+			
+			input:nth-of-type(1):checked{
+				counter-increment:num 5;
+			}
+			
+			input:nth-of-type(2):checked{
+				counter-increment:num 2;
+			}
+			
+			input:nth-of-type(3):checked{
+				counter-increment:num 1;
+			}
+			
+			input:nth-of-type(4):checked{
+				counter-increment:num 7;
+			}
+			
+			div::after{
+				content:'count ' counter(num)
+			}
+			
+			ul{
+				list-style:none;
+				counter-reset:a;
+			}
+			
+			li{
+				counter-increment: a;
+				
+			}
+			
+			li:before{
+				content:counter(a,cjk-ideographic);
+			}
+			
+			.box a{
+				position:relative;
+			}
+			
+			.box a img{
+				width:200px;
+			}
+			
+			.box a::after{
+				content:attr(title);
+				position:absolute;
+				bottom:0;
+				left:0;
+				right:0;
+				height:35px;
+				line-height:35px;
+				text-align:center;
+				background-color:#ccc;
+				color:#fff;
+			}
+		</style>
+	</head>
+	<body>
+		5<input type="checkbox" />
+		2<input type="checkbox" />
+		1<input type="checkbox" />
+		7<input type="checkbox" />
+		<div></div>
+		
+		<ul>
+			<li>css</li>
+			<li>javascript</li>
+			<li>html5</li>
+		</ul>
+		
+		<div class="box">
+			<a href="javascript;" title="这是一张风景照片">
+				<img src="img/Tsingtao.jpeg" />
+			</a>	
+		</div>
+	</body>
+</html>

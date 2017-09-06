@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		</style>
+	</head>
+	<body>
+		<!--first flex 暂时效果累死inline-block-->
+		<div style="display:flex;height:35px;line-height:35px;">
+			<p style="background-color:pink;">flex1</p>
+			<p style="background-color:pink;">flex2</p>
+		</div>
+		<br />
+		<!--second  flex 属性测试2-->
+		<div style="display:flex;width:500px;height:35px;line-height:35px;">
+			<p style="width:100%;text-align: center;background-color:pink;">haha</p>
+			<p style="width:100%;text-align: center;background-color:green;">kjiji</p>
+		</div>
+		<br />
+		<br />
+		<!--third display:flex 属性测试-->
+		<div style="display:flex;width:500px;height:35px;line-height:35px;background-color:red;">
+			<p style="width:30%;text-align: center;background-color:black;">jiji</p>
+			<p style="width:30%;text-align: center;background-color:yellow">niubi</p>
+			<p style="width:30%;text-align: center;background-color: white;">wocao</p>
+		</div>
+		<br />
+		<br />
+		<!--fourth   inline-flex 距离-->
+		
+		<div style="display:inline-flex;width:500px;height:35px;line-height:35px;">
+			<p style="width:100%;text-align: center;background-color:pink;">flex1</p>
+			<p style="width:100%;text-align: center;background-color:green;">flex2</p>
+		</div>
+		
+		<!-- fifth  inline-flex 和flex 区别 -->
+		<div style="height:35px;line-height:35px;">
+			<div style="display:flex;background-color:orange;">
+				flex	
+			</div>
+			<div style="display:inline-flex;background-color:pink;">
+				flex2
+			</div>
+		</div>
+		<br />
+		<br />
+		<br />
+		<!--sixth flex 和·inline-flex 区别2 -->
+		<div style="height:35px;line-height:35px;display:flex;width:300px;background-color:orange;">
+			flex
+		</div>
+		<span>hahahahhhaha</span>
+		<div style="height:35px;line-height:35px;display:inline-flex;background-color:pink;">flex2</div>
+		<span>xixixiixixix</span>
+		
+		<!--seventh --flex-direction举例-->
+			
+		<div style="display:flex;width:500px;height:100px;outline:1px solid red;align-items:stretch">
+			<p>hahahahah</p>
+		</div>
+		
+			
+		<div style="display:flex;width:500px;height:100px;outline:1px solid red;align-items:flex-start">
+			<p>hahahahah</p>
+		</div>
+		<br />
+		<br />
+		<br />
+		<!--eighth  研究那个 align-items：baseline 干屁用的-->
+		
+		<div style="display:flex;width:100px;background-color:red;align-items:baseline;">
+			<p>这是</p>
+			<p>baseline</p>
+		</div>
+		<br />
+		<div style="display:flex;width:100px;background-color:orange;align-items:flex-start;">
+			<p>这是</p>
+			<p>flex-start</p>
+		</div>
+		
+		<!--ninth  flex-wrap:order  值越大 排在后面-->
+		<div style="display:flex;">
+			<p style="order:6;">css(1,6)</p>
+			<p style="order:2;">html5(2,2)</p>
+			<p style="order:5;">javascript(3,5)</p>
+		</div>
+		
+		<!--tenth display:flex; align-self  单独对元素的 对齐方式 可以使用这个属性，覆盖align-items 设置的值-->
+		
+		<!--eleventh  flex 份数
+		-->
+		<div style="display:flex;width:300px;margin-top:12px;">
+			<div style="flex:1;background-color:red;">1</div>
+		</div>
+		
+		
+		<div style="display:flex;width:300px;margin-top:12px;">
+			<div style="flex:1;background-color:red;">1</div>
+			<div style="flex:2;background-color:pink;">2</div>
+		</div>
+		
+		<div style="display:flex;width:300px;margin-top:12px;">
+			<div style="flex:1;background-color:red;">1</div>
+			<div style="flex:2;background-color:pink;">2</div>
+			<div style="flex:3;background-color:green;">3</div>
+		</div>
+		
+		<!--twelfth 当flex 只有一个时 那么 不管设置多少都一样，如果flex 两个一样就评分 flex 不能小于1-->
+		
+		<!--thirteenth   flex-direction flex wrap 例子 从右到左 不换行   如果子元素  没有设置flex 那么宽度不会继承 父亲-->
+		
+		<div style="display:flex;width:300px;margin-top:12px;flex-flow:row-reverse nowrap;"> 
+			<div>在坚持一会，马上完结</div>
+			<div>okokokokokookokoko</div>
+		</div>
+		
+		<!--14  flex不设置份数 flex
+			 不写1  不继承宽度
+		-->
+		
+		<div style="display:flex;width:200px;height:100px;margin-top:12px;background-color:pink;">
+			<p style="background-color:orange;">下一秒</p>
+		</div>
+		
+		<div style="display:flex;width:200px;height:100px;margin-top:12px;background-color:red;">
+			<p style="flex:1;">下一秒</p>
+		</div>
+		
+		<!--15- 实战    -->
+		
+		<div style="display:flex;width:300px;height:35px;line-height:35px;">
+			<div style="flex:1;border:1px solid red;text-align: center;">css</div>
+			<div style="flex:1;border:1px solid red;text-align: center;margin-left:-1px;">html</div>
+			<div style="flex:1;border:1px solid red;text-align: center;margin-left:-1px;">javascript</div>
+		</div><!-- 宽度想要自适应，那我就不设置宽度-->
+		
+		<!--16-实战2-->
+		
+		<div style="width:200px;height:200px;flex-direction: column;justify-content:center;">
+			<div style="height:35px;line-height:35px;border-bottom:1px solid #ccc;text-align: center;border-top:1px solid #ccc;">css</div>
+			<div style="height:35px;line-height:35px;border-bottom:1px solid #ccc;text-align: center;">html</div>
+			<div style="height:35px;line-height:35px;border-bottom:1px solid #ccc;text-align: center;">javascript</div>
+		</div>
+	</body>
+</html>
