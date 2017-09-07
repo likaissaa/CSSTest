@@ -13,19 +13,23 @@
 			}
 			
 			input:first-of-type,span:first-of-type{
-				display: none;
+				/*display: none;*/
 			}
 			
 			span{
 				font-size:24px;
 				color:orange;
 			}
-			input:hover + span{
-				color:orange;
+			/*input:hover + span{
+				color:orange !important;
 			}
 			
-			input:hover ~ span{
-				color:#666;
+			input:hover span{
+				color:#666 !important;
+			}*/
+			input:hover+span~span{
+				/*background-color:red;*/
+				color:#666 !important	
 			}
 			input:checked ~ span{
 				color:#666;
@@ -37,8 +41,6 @@
 	</head>
 	<body>
 		<div class="box">
-			<input type="radio" name="xin" checked="checked"/>
-			<span>&times;</span>
 			<input type="radio" name="xin"/>
 			<span>&times;</span>
 			<input type="radio" name="xin"/>
